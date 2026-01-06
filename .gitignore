@@ -1,0 +1,27 @@
+# MinIO Volume
+minio_data/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv
+venv/
+
+# Go
+*.exe
+*.test
+
+# Debug & Generated Images
+debug_*.png
+last_*.png
+result_*.png
+final_*.png
+*_debug.png
+*.tif
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+*.onnx
+*.onnx.data

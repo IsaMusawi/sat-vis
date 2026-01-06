@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package geoanalysis;
+
+//option go_package = "github.com/musawi/sat-vis/go-api/pkg/pb"; // -> for deploy
+option go_package = "sat-vis/go-api/pkg/pb"; // -> for local
+
+service ImageAnalyzer {
+    rpc AnalyzeTile (TileRequest) returns (TileResponse);
+}
+
+// The Input
+message TileRequest {
+  string request_id = 1;
+  int32 width = 2;
+  int32 height = 3;
+  bytes image_data = 4;        // The raw pixel bytes
+  string model_type = 5;       // "cloud_mask" or "ndvi"
+}
+
+// The Output
+message TileResponse {
+  string request_id = 1;
+  bool success = 2;
+  bytes result_data = 3;       // The processed mask
+  string error_message = 4;
+}
