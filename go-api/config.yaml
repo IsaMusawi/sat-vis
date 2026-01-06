@@ -1,0 +1,17 @@
+server:
+  port: "8081"
+
+grpc:
+  python_worker_address: "localhost:50051"
+  timeout_seconds: 10
+
+image:
+  tile_size: 256
+
+storage:
+  endpoint: "localhost:9000"
+  access_key: "admin"
+  secret_key: "password123"
+  use_ssl: false
+  bucket_input: "satellite-raw"
+  bucket_output: "satellite-masks"
