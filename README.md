@@ -35,6 +35,7 @@ graph LR
     C -.->|Async Fetch| D(Python AI Worker)
     D -->|Step 1: OpenCV| E{Is Bright?}
     E -- No --> F[Ignore]
-    E -- Yes --> G|Step 2: ONNX ResNet| H{Is Cloud Texture?}
+    E -- Yes --> G[Step 2: ONNX ResNet]
+    G --> H{Is Cloud Texture?}
     H -- Yes --> I[Generate Cloud Mask]
     H -- No --> F
