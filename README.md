@@ -28,6 +28,8 @@ Processing large-scale satellite imagery presents unique engineering challenges 
 
 The system adopts a microservice-like architecture where storage is decoupled from processing logic.
 
+Note: The model.onnx file is not included in this repository due to file size limits (>100MB). To run this locally, you would need to place a standard ResNet-UNet ONNX model in the /models directory.
+
 ```mermaid
 graph LR
     A[Raw Satellite Tiff] -->|Input| B(Go Tiler Service)
@@ -39,5 +41,3 @@ graph LR
     G --> H{Is Cloud Texture?}
     H -- Yes --> I[Generate Cloud Mask]
     H -- No --> F
-
-Note: The model.onnx file is not included in this repository due to file size limits (>100MB). To run this locally, you would need to place a standard ResNet-UNet ONNX model in the /models directory.
