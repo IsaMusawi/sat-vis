@@ -39,3 +39,5 @@ graph LR
     G --> H{Is Cloud Texture?}
     H -- Yes --> I[Generate Cloud Mask]
     H -- No --> F
+
+Note: The model.onnx file is not included in this repository due to file size limits (>100MB). To run this locally, you would need to place a standard ResNet-UNet ONNX model in the /models directory.

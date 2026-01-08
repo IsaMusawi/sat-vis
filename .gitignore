@@ -23,5 +23,4 @@ final_*.png
 .DS_Store
 Thumbs.db
 
-*.onnx
 *.onnx.data
